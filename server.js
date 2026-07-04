@@ -1,9 +1,10 @@
 const dotenv = require('dotenv');
+const connectDB = require('./src/config/db');
 
+// Load environment variables before importing the app
 dotenv.config();
 
 const app = require('./src/app');
-const connectDB = require('./src/config/db');
 
 const startServer = async () => {
   await connectDB();
